@@ -19,4 +19,13 @@
       ];
     };
   };
+
+  system.autoUpgrade = {
+    enable = true;
+    persistent = true;
+    allowReboot = false;
+    randomizedDelaySec = "0";
+    operation = "switch";
+    dates = "09:00";
+  };
 }
