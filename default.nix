@@ -3,13 +3,15 @@
 {
   nix = {
     optimise = {
-      dates = [ "daily" ];
       automatic = true;
+      dates = [ "09:00" ];
     };
     gc = {
-      dates = "daily";
-      options = "--delete-older-than 5d";
       automatic = true;
+      dates = "09:00";
+      options = "--delete-older-than 5d";
+      persistent = true;
+      randomizedDelaySec = "0";
     };
     settings = {
       auto-optimise-store = true;
@@ -22,10 +24,10 @@
 
   system.autoUpgrade = {
     enable = true;
-    persistent = true;
     allowReboot = false;
-    randomizedDelaySec = "0";
-    operation = "switch";
     dates = "09:00";
+    operation = "switch";
+    persistent = true;
+    randomizedDelaySec = "0";
   };
 }
