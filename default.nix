@@ -2,13 +2,9 @@
 
 {
   nix = {
-    optimise = {
-      automatic = true;
-      dates = [ "09:00" ];
-    };
     gc = {
       automatic = true;
-      dates = "09:00";
+      dates = "08:00";
       options = "--delete-older-than 5d";
       persistent = true;
       randomizedDelaySec = "0";
