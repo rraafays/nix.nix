@@ -2,10 +2,6 @@
 
 {
   nix = {
-    optimise = {
-      automatic = true;
-      dates = [ "09:00" ];
-    };
     gc = {
       automatic = true;
       dates = "09:00";
@@ -14,7 +10,6 @@
       randomizedDelaySec = "0";
     };
     settings = {
-      auto-optimise-store = true;
       experimental-features = [
         "nix-command"
         "flakes"
